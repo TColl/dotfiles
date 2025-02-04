@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+autodetach on
+
+# give a two-line status, with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{W}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b gk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{W}%d/%m/%y %{W}%C%A%{g}]'
+
+# increase scrollback buffer so we can see more history
+defscrollback 5000
+
+# drop annoying startup message
+startup_message off
+
+# colors
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
+# mouse tracking allows to switch region focus by clicking
+mousetrack on
